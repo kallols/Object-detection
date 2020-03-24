@@ -23,7 +23,8 @@ net = cv2.dnn.readNetFromCaffe('/home/oto/Downloads/object-detection-deep-learni
 # load the input image and construct an input blob for the image
 # by resizing to a fixed 300x300 pixels and then normalizing it
 # (note: normalization is done via the authors of the MobileNet SSD
-# implementation)
+#
+# implementation
 image = cv2.imread('/home/oto/Downloads/object-detection-deep-learning/images/example_05.jpg')
 (h, w) = image.shape[:2]
 blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 0.007843, (300, 300), 127.5)
